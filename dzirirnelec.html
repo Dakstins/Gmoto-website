@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mopēda Problēmu Diagnostika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .important {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+
+        .step {
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            padding: 10px 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .step ul {
+            margin-left: 20px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #ddd;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 200px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Atgriešanās poga -->
+    <button class="back-button" onclick="window.history.back()">Atgriezties</button>
+
+    <!-- Galvene -->
+    <header>
+        <h1>Mopēda Problēmu Diagnostika</h1>
+    </header>
+
+    <!-- Saturs -->
+    <main>
+        <section class="image-container">
+            <img src="https://via.placeholder.com/200" alt="Mopēda diagnostika attēls">
+        </section>
+
+        <section class="step">
+            <h2>1. Degvielas padeves problēmas</h2>
+            <ul>
+                <li><span class="important">Tukša vai slikta degviela:</span> Degviela var būt beigusies vai veca (izgājusi derīguma termiņš). 
+                    <strong>Risinājums:</strong> Pārliecinies, ka bākā ir pietiekami svaiga degviela.</li>
+                <li><span class="important">Aizsērējis degvielas filtrs:</span> Filtrs var būt aizsērējis, kas traucē degvielas plūsmu. 
+                    <strong>Risinājums:</strong> Pārbaudi filtru un notīri vai nomaini, ja nepieciešams.</li>
+                <li><span class="important">Karburatora problēmas:</span> Karburators var būt aizsērējis vai nepareizi noregulēts. 
+                    <strong>Risinājums:</strong> Notīri karburatoru un noregulē degvielas-gaisa maisījumu.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>2. Nepietiekams gaisa pieplūdums</h2>
+            <ul>
+                <li><span class="important">Aizsērējis gaisa filtrs:</span> Netīrs gaisa filtrs var ierobežot gaisa piekļuvi. 
+                    <strong>Risinājums:</strong> Pārbaudi un notīri vai nomaini gaisa filtru.</li>
+                <li><span class="important">Nepareizs karburatora regulējums:</span> Ja gaisa un degvielas attiecība nav optimāla, dzinējs nevarēs iedarbināties. 
+                    <strong>Risinājums:</strong> Regulē karburatoru, lai panāktu pareizo maisījumu.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>3. Saspiedes problēmas (kompresija)</h2>
+            <ul>
+                <li><span class="important">Zems spiediens cilindrā:</span> Ja cilindros nav pietiekamas saspiedes, degmaisījums nevar aizdegties. 
+                    <strong>Risinājums:</strong> Pārbaudi spiedienu ar kompresijas mērītāju.</li>
+                <li><span class="important">Cilindra galvas blīve:</span> Noplūdusi vai bojāta blīve var pazemināt kompresiju. 
+                    <strong>Risinājums:</strong> Aizstāj bojāto blīvi.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>4. Problēmas ar aizdedzes laiku</h2>
+            <ul>
+                <li><span class="important">Nepareizs aizdedzes laiks:</span> Ja aizdedze notiek pārāk agri vai vēlu, dzinējs var neiedarboties. 
+                    <strong>Risinājums:</strong> Pārbaudi un noregulē aizdedzes sistēmu.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>5. Izplūdes sistēmas problēmas</h2>
+            <ul>
+                <li><span class="important">Aizsērējis izplūdes kolektors vai trokšņu slāpētājs:</span> Aizsērējusi izplūdes sistēma var bloķēt gāzu plūsmu. 
+                    <strong>Risinājums:</strong> Notīri izplūdes kolektoru un trokšņu slāpētāju.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Diagnostikas kārtība</h2>
+            <ul>
+                <li><span class="important">Degvielas un gaisa pievade:</span> Pārbaudi degvielas un gaisa padevi.</li>
+                <li><span class="important">Kompresija:</span> Izmanto kompresijas mērītāju.</li>
+                <li><span class="important">Aizdedze:</span> Pārbaudi sveces un aizdedzes laiku.</li>
+                <li><span class="important">Izplūde:</span> Pārbaudi izplūdes sistēmu.</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>

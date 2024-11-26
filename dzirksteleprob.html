@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mopeda Dzirksteles Problēmu Diagnostika</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .important {
+            color: #E74C3C;
+            font-weight: bold;
+        }
+
+        .step {
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            padding: 10px 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .step ul {
+            margin-left: 20px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #ddd;
+        }
+
+        img {
+            max-width: 100px;
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Atgriešanās poga -->
+    <button class="back-button" onclick="window.history.back()">Atgriezties</button>
+
+    <!-- Galvene -->
+    <header>
+        <h1>Mopeda Dzirksteles Problēmu Diagnostika</h1>
+    </header>
+
+    <!-- Saturs -->
+    <main>
+        <section class="step">
+            <h2>1. Aizdedzes sistēmas bojājumi</h2>
+            <img src="spark_plug.jpg" alt="Aizdedzes svece">
+            <ul>
+                <li><span class="important">Svece (aizdedzes svece):</span> Svece var būt nolietojusies, netīra vai bojāta.</li>
+                <li>Risinājums: Pārbaudi sveci, notīri to vai nomaini pret jaunu.</li>
+                <li><span class="important">Sveces vads:</span> Sveces vads var būt bojāts vai slikti pievienots.</li>
+                <li>Risinājums: Pārbaudi, vai vads ir cieši savienots un nav pārtraukumu.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>2. Aizdedzes spole</h2>
+            <img src="ignition_coil.jpg" alt="Aizdedzes spole">
+            <ul>
+                <li>Ja aizdedzes spole ir bojāta, tā nevar ģenerēt nepieciešamo augstspriegumu dzirkstelei.</li>
+                <li>Risinājums: Pārbaudi spoli ar multimetru vai nomaini, ja tā nedarbojas.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>3. Magnēts (magneto) vai impulsu ģenerators</h2>
+            <img src="magneto.jpg" alt="Magneto sistēma">
+            <ul>
+                <li>Magnēta sistēma nodrošina elektrību aizdedzes sistēmai. Ja magnēts ir nodilis vai bojāts, dzirkstele var pazust.</li>
+                <li>Risinājums: Pārbaudi magnētu un impulsu ģeneratoru, ja iespējams, izmanto diagnostikas ierīces.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>4. CDI bloks (Capacitor Discharge Ignition)</h2>
+            <img src="cdi_unit.jpg" alt="CDI bloks">
+            <ul>
+                <li>CDI bloks kontrolē aizdedzi. Bojāts CDI bloks var pilnībā apturēt dzirksteles veidošanos.</li>
+                <li>Risinājums: Nomaini CDI bloku, ja tas ir bojāts.</li>
+            </ul>
+        </section>
+
+        <section class="step">
+            <h2>5. Drošinātāji un elektroinstalācija</h2>
+            <img src="wiring.jpg" alt="Elektroinstalācija">
+            <ul>
+                <li>Bojāti vai sarūsējuši kontakti, pārrauti vadi vai izdegusi drošinātāja kārbiņa var pārtraukt elektrības plūsmu.</li>
+                <li>Risinājums: Pārbaudi visus savienojumus un drošinātājus, notīri kontaktus vai salabo vadus.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Papildu Padomi</h2>
+            <ul>
+                <li><span class="important">Diagnostika:</span> Sāc ar vienkāršākajiem komponentiem un pakāpeniski pārbaudi visu aizdedzes ķēdi.</li>
+                <li><span class="important">Instrumenti:</span> Izmanto multimetru, lai pārbaudītu elektrisko komponentu darbību.</li>
+                <li><span class="important">Rezerves daļas:</span> Ja neesi pārliecināts par problēmu, aizstāj vienu detaļu vienlaikus.</li>
+                <li><span class="important">Mehāniķa palīdzība:</span> Ja nevari atrisināt problēmu pats, ieteicams vērsties pie profesionāļa.</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>

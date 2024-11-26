@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmoto - Mājas Lapa</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333333;
+            height: 100vh;
+            padding-top: 30px;
+            color: white;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            font-size: 2em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .logo span {
+            color: rgb(255, 0, 0); /* Red color for "D" */
+        }
+
+        /* Sidebar Menu */
+        .menu-item {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #5ff57f;
+            text-align: left;
+            font-size: 1.2em;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown Menu for options (appear to the right) */
+        .submenu {
+            display: none;
+            background-color: #423d41;
+            position: absolute;
+            left: 240px; /* Reduce distance for closer transition */
+            top: 0;
+            width: 200px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        .submenu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .submenu a:hover {
+            background-color: #555;
+        }
+
+        .menu-item:hover .submenu {
+            display: block;
+            animation: slideInLeft 0.2s ease-in-out; /* Faster transition */
+        }
+
+        /* Hover animation (left to right) */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(10px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            width: calc(100% - 250px); /* Adjust for sidebar */
+        }
+
+        /* Title Styling */
+        .title-container {
+            position: relative;
+            margin: 20px 0; /* Ensure no text below */
+            text-align: left;
+            padding-left: 270px; /* Offset to clear sidebar */
+        }
+
+        .title {
+            display: inline-block;
+            font-size: 3em;
+           
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            background: linear-gradient(to right, #ff4e50, #f9d423);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border: 2px solid #f9d423;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+        }
+
+        /* Right Sidebar (Smaller version) */
+        .right-sidebar {
+            width: 200px; /* Narrower sidebar */
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #333;
+            height: 100vh;
+            padding-top: 30px;
+            color: white;
+        }
+
+        /* Top Menu in the right corner */
+        .top-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .top-menu .menu-item {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            color: white;
+            position: relative;
+            width: 150px;
+        }
+
+        .top-menu .menu-item:hover {
+            background-color: #555;
+        }
+
+        /* Submenu for the top menu */
+        .top-menu .submenu {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            width: 200px;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            left: -200px; /* Shift submenu to the left side */
+        }
+
+        .top-menu .submenu a {
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .top-menu .submenu a:hover {
+            background-color: #555;
+        }
+
+        .top-menu .menu-item:hover .submenu {
+            display: block;
+            animation: slideInRight 0.1s ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(-10px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: rgb(188, 25, 25);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <span>D</span>moto
+        </div>
+
+        <div class="menu-item">
+            Info par mopediem
+            <div class="submenu">
+                <a href="dakstins1.html">Pareiz krāsošana</a>
+                <a href="dakstins2.html">Sastāvs</a>
+                <a href="dzirksteleprob.html">Nav dzirkstele?</a>
+                <a href="dzirirnelec.html">Dzirkstele ir bet nelec?</a>
+                <a href="kompresijanav.html">Zūd vai nav kompresija?</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            Modeļi, Fakti un Tehnoloģijas
+            <div class="submenu">
+                <a href="dakstins3.html">Piaggio</a>
+                <a href="page2.html">Yamaha</a>
+                <a href="page3.html">Honda</a>
+                <a href="page4.html">Vespa</a>
+                <a href="page3.html">Kymco</a>
+                <a href="page3.html">Rieju</a>
+                <a href="page3.html">Aprilia</a>
+                <a href="page3.html">Suzuki</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="title-container">
+            <div class="title">Welcome to Dmoto!</div>
+        </div>
+        
+
+        <p><span style="color: #E74C3C; font-weight: bold;">Mēs esam Dmoto</span>, kura mērķis ir iepazīstināt cilvēkus ar mopēdu pasauli, nevis konkrēti pārdot produktus. Mūsu galvenais uzdevums ir sniegt visaptverošu informāciju par dažādiem mopēdu modeļiem, to priekšrocībām, un tehniskajām īpašībām, lai tu varētu pieņemt izsvērtu lēmumu, meklējot ideālo transporta līdzekli.</p>
+
+        <p>Mēs saprotam, ka bieži vien var būt grūti izvēlēties, kurš mopēds būs piemērots tieši tev. Tāpēc mēs piedāvājam rūpīgi izvēlētu informāciju, kas palīdzēs saprast, kādi mopēdi varētu atbilst taviem vajadzībām un kādas priekšrocības tie sniedz salīdzinājumā ar citiem transporta līdzekļiem.</p>
+        
+        <p><span style="color: #E74C3C; font-weight: bold;">Kas mēs esam?</span> <span style="font-style: italic; margin-left: 20px; display: inline-block;">Dmoto nav tieši saistīts ar produktu tirdzniecību. Mūsu mērķis ir sniegt noderīgu un skaidru informāciju par mopēdiem, kas ir pieejami tirgū. Šī mājaslapa ir izveidota, lai tev būtu ērti un vienkārši iegūt visu nepieciešamo informāciju vienuviet.</span></p>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; padding-top: 20px;">
+            <img src="https://th.bing.com/th/id/R.136dc65bfdb488611f533e1940386c50?rik=jAfSDKFW85BLcw&pid=ImgRaw&r=0" alt="Mopēds 1" style="width: 30%; max-width: 250px; height: auto; border-radius: 8px;">
+            <img src="https://th.bing.com/th/id/OIP.5QijFLFjvfhJk0cyeZ8SMwHaE7?rs=1&pid=ImgDetMain" alt="Mopēds 2" style="width: 30%; max-width: 250px; height: auto; border-radius: 8px;">
+            <img src="https://3.bp.blogspot.com/-a1QxtfXbgMc/U3tg0ABAnNI/AAAAAAAAAKA/elzKtJDud7Q/s1600/IMG_4902.JPG" alt="Mopēds 3" style="width: 30%; max-width: 250px; height: auto; border-radius: 8px;">
+        </div>
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+        <div class="top-menu">
+            <div class="menu-item">
+                YouTube pamacibas
+                <div class="submenu">
+                    <a href="https://www.youtube.com/watch?v=xyHPM8ID_ds">Vecs musars ruks atkal?</a>
+                    <a href="https://www.youtube.com/watch?v=VD3tWAXdiF4">50cc 4t mopeda tuning</a>
+                    <a href="https://www.youtube.com/watch?v=gDa9nkgxgLU">50cc 2t mopeda tuning</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                Internetveikals
+                <div class="submenu">
+                    <a href="https://www.gmoto.lv/?utm_source=google&utm_medium=cpc&utm_campaign=[DSA]%20Wszystko&gad_source=1&gclid=CjwKCAiA3ZC6BhBaEiwAeqfvyv8ztDpD-T5yqrbbv-W0MRgemJiMRvAmP07OSc8kECFxDUZ5Q5EB4RoClcQQAvD_BwE">Gmoto</a>
+                    <a href="https://scooter-zone.eu">ScooterZone</a>
+                    <a href="https://scooters.lv">Scooters.lv</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Dmoto. Visi tiesības aizsargātas.</p>
+    </div>
+
+</body>
+</html>
